@@ -28,14 +28,39 @@ class MainActivity : AppCompatActivity() {
         }
         btnvariablePractice.setOnClickListener {
 
+            var myName : String // 내용 변경 가능
+
+            val friendName : String  // 한번 대입한 값으로 고정
+
+//        myName에는 내이름 넣고, friendName에는 친구 이름
+
+            myName = "최다영"
+            friendName = "최진화"
+//        내이름 친구 이름 다시 대입(데이터 변경)
+
+            myName = "최다영" // 추가로 다시 대입해도 됨. var
+//        friendName = "조상민" // 한번 넣은 걸로 계속 사용
+
+
+            Toast.makeText(this, myName, Toast.LENGTH_SHORT).show()
+
         }
 
         btnConditionPractice.setOnClickListener {
-            val userAge = 25
+            val userAge = 10
 
             if(userAge >= 20) {
                 Toast.makeText(this,"성인입니다.",Toast.LENGTH_SHORT).show()
 
+            }
+
+            else if (userAge >=17) {
+                Toast.makeText(this,"고등학생입니다.",Toast.LENGTH_SHORT).show()
+
+            }
+
+            else if(userAge >= 14) {
+                Toast.makeText(this,"중학생입니다.", Toast.LENGTH_SHORT).show()
 
             }
 
@@ -44,21 +69,34 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        var myName : String // 내용 변경 가능
+        btnConditionPractice2.setOnClickListener {
 
-        val friendName : String  // 한번 대입한 값으로 고정
+            val salary = 4000
+            val minutes = 50
+            val overWork = false
 
-//        myName에는 내이름 넣고, friendName에는 친구 이름
+//            기준1) 연봉이 5천 이상이면 ok
+            if(salary >= 5000) {
+                Toast.makeText(this,"연봉이 5천이상", Toast.LENGTH_SHORT).show()
+            }
 
-        myName = "최다영"
-        friendName = "최진화"
-//        내이름 친구 이름 다시 대입(데이터 변경)
+            if(!overWork) { // overWork 변수에 true 있을 때만 실행 => ! 넣어서 야근하지 않으면
+                Toast.makeText(this,"야근을 안함", Toast.LENGTH_SHORT).show()
 
-        myName = "최다영" // 추가로 다시 대입해도 됨. var
-//        friendName = "조상민" // 한번 넣은 걸로 계속 사용
+            }
+//            기준 3. 연봉 4000이상, 거리 30분 이내
+
+            if(salary >= 4000 && minutes < 30) {
+                Toast.makeText(this,"연봉 AND 출퇴근 시간 OK", Toast.LENGTH_SHORT).show()
+            }
+
+            if(salary >= 5000 || minutes < 60) {
+                Toast.makeText(this,"연봉 OR 출퇴근 시간 OK", Toast.LENGTH_SHORT).show()
+            }
+
+        }
 
 
-        Toast.makeText(this, myName, Toast.LENGTH_SHORT).show()
 
     }
 

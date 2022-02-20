@@ -32,5 +32,23 @@
         android:layout_height="wrap_content"
         android:text="조건문 연습" />
 
+    <Button
+        android:id="@+id/btnConditionPractice2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="조건문 연습2" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="태어난 년도 입력(ex.1988)"
+        android:inputType="number"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="나이를 판정하기"/>
+
+
 
 </LinearLayout>
