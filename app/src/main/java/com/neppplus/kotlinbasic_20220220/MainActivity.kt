@@ -115,8 +115,11 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-
-
+        btnApply.setOnClickListener { val inputMessage = edtMessage.text.toString()
+            txtMessage.text = inputMessage
+        }
     }
 
 }
+
+
