@@ -24,14 +24,22 @@ class MainActivity : AppCompatActivity() {
         btnToast.setOnClickListener { 
 //            토스트 띄워보자 
             Toast.makeText(this, "토스트 버튼이 눌린", Toast.LENGTH_SHORT).show()
-
-
-            
-            
-            
             
         }
-        
+
+        var myName : String // 내용 변경 가능
+
+        val friendName : String  // 한번 대입한 값으로 고정
+
+//        myName에는 내이름 넣고, friendName에는 친구 이름
+
+        myName = "최다영"
+        friendName = "최진화"
+//        내이름 친구 이름 다시 대입(데이터 변경)
+
+        myName = "최다영" // 추가로 다시 대입해도 됨. var
+//        friendName = "조상민" // 한번 넣은 걸로 계속 사용
+
 
 
 
